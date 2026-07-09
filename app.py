@@ -3,6 +3,7 @@ import joblib
 import numpy as np
 import pickle
 import pandas as pd
+from keras.models import load_model
 
 st.markdown(
     """
@@ -33,7 +34,9 @@ st.markdown(
 oe = pickle.load(open("oe_ann_bank_churn.pkl", "rb"))   
 pe = pickle.load(open("powertransformer_ann_bank_churn.pkl", "rb")) 
 scaler = pickle.load(open("scaler_ann_bank_churn.pkl", "rb")) 
-model = pickle.load(open("best_model_keras_ann_bank_churn.pkl", "rb"))  
+#model = pickle.load(open("best_model_keras_ann_bank_churn.pkl", "rb"))  #old method from pickle file
+
+model = load_model("best_model_keras_bank_churn_ann.keras")  #new method from h5 file
 
 st.markdown(
     "<h1 style='text-align: center;'>Bank Churn Predictor</h1>",
