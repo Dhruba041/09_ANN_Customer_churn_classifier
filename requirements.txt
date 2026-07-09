@@ -6,3 +6,4 @@ plotly
 matplotlib
 seaborn
 keras_tuner
+tensorflow
