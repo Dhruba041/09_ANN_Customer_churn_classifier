@@ -1,0 +1,8 @@
+ipykernel
+pandas
+scikit-learn==1.8.0
+streamlit
+plotly
+matplotlib
+seaborn
+xgboost
